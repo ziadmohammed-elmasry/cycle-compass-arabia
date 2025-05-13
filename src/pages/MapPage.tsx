@@ -20,7 +20,7 @@ const MapPage = () => {
   }, []);
 
   const startJourney = () => {
-    console.log("بدء الرحلة");
+    console.log("Start Journey");
     // Implementation would go here
   };
 
@@ -43,14 +43,14 @@ const MapPage = () => {
                 <div className="absolute top-1/2 left-1/4 transform -translate-y-1/2 -translate-x-1/2">
                   <div className="w-4 h-4 bg-primary rounded-full shadow-md"></div>
                   <div className="absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 text-xs whitespace-nowrap bg-white px-2 py-1 rounded shadow-sm">
-                    موقعي الحالي
+                    My Current Location
                   </div>
                 </div>
                 
                 <div className="absolute top-1/2 right-1/4 transform -translate-y-1/2 translate-x-1/2">
                   <div className="w-4 h-4 bg-success rounded-full shadow-md"></div>
                   <div className="absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 text-xs whitespace-nowrap bg-white px-2 py-1 rounded shadow-sm">
-                    موقع العجلة
+                    Wheel Location
                   </div>
                 </div>
               </div>

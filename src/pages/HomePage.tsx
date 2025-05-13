@@ -72,9 +72,9 @@ const HomePage = () => {
               "text-destructive": status === "not_found",
             })}
           >
-            {status === "searching" && "جارٍ البحث"}
-            {status === "connected" && "تم الاتصال"}
-            {status === "not_found" && "مش لاقي حاجة"}
+            {status === "searching" && "Searching"}
+            {status === "connected" && "Connected"}
+            {status === "not_found" && "Not Found"}
           </p>
         </div>
 
@@ -87,7 +87,7 @@ const HomePage = () => {
           </button>
         )}
         {!isSearching && (
-          <p className="mt-4 text-gray-500 text-center animate-fade-in">اضغط على الزر للبحث تاني</p>
+          <p className="mt-4 text-gray-500 text-center animate-fade-in">Press the button to search again</p>
         )}
       </div>
     </PageLayout>

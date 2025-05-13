@@ -5,7 +5,7 @@ import { Switch } from "@/components/ui/switch";
 import { LogOut } from "lucide-react";
 
 const SettingsPage = () => {
-  const [language, setLanguage] = useState<"ar" | "en">("ar");
+  const [language, setLanguage] = useState<"ar" | "en">("en");
   const [bluetoothEnabled, setBluetoothEnabled] = useState(true);
 
   const toggleLanguage = () => {
@@ -13,17 +13,17 @@ const SettingsPage = () => {
   };
 
   const logout = () => {
-    console.log("تسجيل الخروج");
+    console.log("Logout");
     // Implementation would go here
   };
 
   return (
-    <PageLayout title="الإعدادات">
+    <PageLayout title="Settings">
       <div className="bg-white rounded-lg shadow-elevation">
         <div className="border-b p-4 flex items-center justify-between">
           <div className="flex items-center">
-            <span className="text-gray-500 ml-2">اللغة:</span>
-            <span>{language === "ar" ? "العربية" : "English"}</span>
+            <span className="text-gray-500 mr-2">Language:</span>
+            <span>{language === "ar" ? "Arabic" : "English"}</span>
           </div>
           <button
             onClick={toggleLanguage}
@@ -31,11 +31,11 @@ const SettingsPage = () => {
           >
             {language === "ar" ? (
               <span className="text-sm flex items-center">
-                <span className="ml-1">🇬🇧</span> English
+                <span className="mr-1">🇬🇧</span> English
               </span>
             ) : (
               <span className="text-sm flex items-center">
-                <span className="ml-1">🇪🇬</span> العربية
+                <span className="mr-1">🇪🇬</span> Arabic
               </span>
             )}
           </button>
@@ -43,8 +43,8 @@ const SettingsPage = () => {
 
         <div className="border-b p-4 flex items-center justify-between">
           <div className="flex items-center">
-            <span className="text-gray-500 ml-2">الاتصال بالبلوتوث:</span>
-            <span>{bluetoothEnabled ? "مفعل" : "غير مفعل"}</span>
+            <span className="text-gray-500 mr-2">Bluetooth Connection:</span>
+            <span>{bluetoothEnabled ? "Enabled" : "Disabled"}</span>
           </div>
           <Switch
             checked={bluetoothEnabled}
@@ -58,8 +58,8 @@ const SettingsPage = () => {
             onClick={logout}
             className="w-full py-3 px-4 rounded-md bg-red-50 text-destructive hover:bg-red-100 transition-colors flex items-center justify-center"
           >
-            <LogOut size={18} className="ml-2" />
-            <span>تسجيل الخروج</span>
+            <LogOut size={18} className="mr-2" />
+            <span>Logout</span>
           </button>
         </div>
       </div>

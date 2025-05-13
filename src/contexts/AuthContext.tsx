@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         // In a real app, this would verify credentials with a backend
         const mockUser = {
           id: "1",
-          name: "أحمد محمد",
+          name: "Ahmed Mohamed",
           email,
           phone: "+20 123 456 7890"
         };

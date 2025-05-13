@@ -22,26 +22,26 @@ const SensorsPage = () => {
   }, []);
 
   return (
-    <PageLayout title="الحساسات">
+    <PageLayout title="Sensors">
       <div className="grid grid-cols-2 gap-4">
-        <SensorCard title="السرعة">
+        <SensorCard title="Speed">
           <div className="flex flex-col items-center">
             <SpeedGauge speed={speed} />
-            <div className="mt-2 text-2xl font-bold">{speed} <span className="text-sm">كم/س</span></div>
+            <div className="mt-2 text-2xl font-bold">{speed} <span className="text-sm">km/h</span></div>
           </div>
         </SensorCard>
 
-        <SensorCard title="البطارية">
+        <SensorCard title="Battery">
           <div className="flex flex-col items-center w-full">
             <Progress value={battery} className="h-4 w-full" />
             <div className="mt-4 text-2xl font-bold">{battery}%</div>
             <div className="text-xs text-gray-500 mt-1">
-              {battery > 80 ? "ممتازة" : battery > 40 ? "جيدة" : "منخفضة"}
+              {battery > 80 ? "Excellent" : battery > 40 ? "Good" : "Low"}
             </div>
           </div>
         </SensorCard>
 
-        <SensorCard title="حرارة الموتور">
+        <SensorCard title="Motor Temperature">
           <div className="flex flex-col items-center">
             <div className="w-full h-6 bg-gradient-to-r from-blue-500 via-yellow-500 to-red-500 rounded-md relative">
               <div 
@@ -51,33 +51,33 @@ const SensorsPage = () => {
             </div>
             <div className="mt-4 text-2xl font-bold">{temperature}°C</div>
             <div className="text-xs text-gray-500 mt-1">
-              {temperature < 50 ? "طبيعية" : temperature < 80 ? "مرتفعة" : "خطيرة"}
+              {temperature < 50 ? "Normal" : temperature < 80 ? "High" : "Critical"}
             </div>
           </div>
         </SensorCard>
 
-        <SensorCard title="حساسات أخرى">
+        <SensorCard title="Other Sensors">
           <div className="w-full">
             <button 
               onClick={() => setIsExpanded(!isExpanded)}
               className="w-full py-2 px-3 bg-gray-100 rounded-md text-center hover:bg-gray-200 transition-colors"
             >
-              {isExpanded ? "إخفاء التفاصيل" : "عرض التفاصيل"}
+              {isExpanded ? "Hide Details" : "Show Details"}
             </button>
             
             {isExpanded && (
               <div className="mt-3 space-y-2 animate-fade-in">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">الضغط:</span>
-                  <span>2.5 بار</span>
+                  <span className="text-gray-500">Pressure:</span>
+                  <span>2.5 bar</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">الرطوبة:</span>
+                  <span className="text-gray-500">Humidity:</span>
                   <span>45%</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">مستوى الزيت:</span>
-                  <span>جيد</span>
+                  <span className="text-gray-500">Oil Level:</span>
+                  <span>Good</span>
                 </div>
               </div>
             )}

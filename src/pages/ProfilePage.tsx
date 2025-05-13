@@ -12,11 +12,11 @@ const ProfilePage = () => {
               <User size={40} className="text-gray-400" />
               {/* In a real app, this would be: <img src={user.avatar} alt={user.name} className="w-full h-full object-cover" /> */}
             </div>
-            <h2 className="text-xl font-bold mb-1">أحمد محمد</h2>
+            <h2 className="text-xl font-bold mb-1">Ahmed Mohamed</h2>
             
             <div className="mt-4 w-full">
               <div className="flex items-center mb-3 bg-gray-50 p-3 rounded-md">
-                <span className="text-gray-500 ml-2">البريد الإلكتروني:</span>
+                <span className="text-gray-500 mr-2">Email:</span>
                 <span className="flex-1">ahmed@example.com</span>
                 <button className="text-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -27,7 +27,7 @@ const ProfilePage = () => {
               </div>
               
               <div className="flex items-center bg-gray-50 p-3 rounded-md">
-                <span className="text-gray-500 ml-2">رقم الهاتف:</span>
+                <span className="text-gray-500 mr-2">Phone Number:</span>
                 <span className="flex-1">+20 123 456 7890</span>
                 <button className="text-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -41,12 +41,12 @@ const ProfilePage = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow-elevation p-4 w-full mb-6">
-          <h3 className="text-lg font-semibold mb-4">الإحصائيات</h3>
+          <h3 className="text-lg font-semibold mb-4">Statistics</h3>
           
           <div className="grid grid-cols-3 gap-4">
-            <StatsCard icon="🚲" value="12" label="عدد الرحلات" />
-            <StatsCard icon="⏳" value="24" label="الوقت (ساعة)" />
-            <StatsCard icon="📍" value="120" label="المسافة (كم)" />
+            <StatsCard icon="🚲" value="12" label="Number of Trips" />
+            <StatsCard icon="⏳" value="24" label="Time (hours)" />
+            <StatsCard icon="📍" value="120" label="Distance (km)" />
           </div>
         </div>
       </div>
